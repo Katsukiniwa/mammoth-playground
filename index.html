@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8" />
     <title>mammoth playground</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <div class="banner">
       <div class="container">
-        <h1><a href="/">Mammoth</a></h1>
+        <h1><a href="/">Playground</a></h1>
       </div>
     </div>
     <div class="container">
-      <input id="document" type="file" />
+      <div class="buttons">
+        <div class="left-button-wrapper">
+          <input
+            type="file"
+            id="document"
+            accept=".docx"
+            style="display: none"
+          />
+          <button id="fileSelect" type="button">問題文(.docx)を選択</button>
+        </div>
+        <div class="right-button-wrapper">
+          <button id="fileDownload" type="button">HTMLをダウンロード</button>
+        </div>
+      </div>
       <div class="row">
-        <div class="span8">
-          <div id="output" class="well">
-          </div>
+        <div class="left">
+          <div id="output" class="well"></div>
         </div>
-        <div class="span4">
+        <div class="right">
+          <details>
+            <summary>HTML</summary>
+            <div id="detail"></div>
+          </details>
           <h3>Messages</h3>
-          <div id="messages">
-          </div>
+          <div id="messages"></div>
         </div>
+      </div>
     </div>
-    
-    <script src="mammoth.browser.js"></script>
-    <script src="demo.js"></script>
+
+    <script defer src="mammoth.browser.js"></script>
+    <script defer src="demo.js"></script>
   </body>
 </html>
-

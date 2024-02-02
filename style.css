@@ -1,55 +1,95 @@
 html {
-    overflow-y: scroll;
-    font-family: helvetica, arial, sans-serif;
+  overflow-y: scroll;
+  font-family: helvetica, arial, sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    overflow: auto;
-    max-width: 940px;
-    margin: 0 auto;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 12px;
 }
 
 .banner {
-    overflow: auto;
-    margin-bottom: 20px;
-    background-color: #555;
-    color: #fff;
+  overflow: auto;
+  background-color: #555;
+  color: #fff;
 }
 
 .banner a {
-    color: #fff;
+  color: #fff;
 }
 
 .banner h1 {
-    font-size: 20px;
-    line-height: 2;
-    margin: 0.5em 0;
+  font-size: 20px;
+  line-height: 2;
+  margin: 0.5em 0;
 }
 
-.span8, .span4 {
-    float: left;
+.buttons {
+  display: flex;
+  flex-direction: row;
 }
 
-.span8 {
+#fileSelect {
+  margin: 12px 0px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+#fileSelect:hover {
+  background: #0d45a5;
+}
+
+#fileDownload {
+  margin: 12px 0px;
+  border: none;
+  background: greenyellow;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.left-button-wrapper {
+  margin-right: 12px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.left,
+.right {
+  font-size: medium;
+}
+
+/* .span8 {
     width: 620px;
 }
 
 .span4 {
     margin: 0 0 0 20px;
-}
+} */
 
 .well {
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    padding: 1em;
-    min-height: 200px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 1em;
+  min-height: 200px;
 }
 
 .messages .warning {
-    color: #cc6600;
+  color: #cc6600;
 }
